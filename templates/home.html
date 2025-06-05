@@ -1,0 +1,554 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Instagram{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <!-- Stories Section -->
+    <div class="stories-section">
+        <div class="stories-wrapper">
+            <!-- Your Story -->
+            <div class="story-item your-story">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="Your story">
+                    <div class="add-story-btn">+</div>
+                </div>
+                <span>Your story</span>
+            </div>
+
+            <!-- Other Stories -->
+            <div class="story-item">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="farrukh...">
+                </div>
+                <span>farrukh...</span>
+            </div>
+
+            <div class="story-item">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="asadbek_a...">
+                </div>
+                <span>asadbek_a...</span>
+            </div>
+
+            <div class="story-item">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="ozodbek_...">
+                </div>
+                <span>ozodbek_...</span>
+            </div>
+
+            <div class="story-item">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="qyrtyv_">
+                </div>
+                <span>qyrtyv_</span>
+            </div>
+
+            <div class="story-item">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="isa_ggii">
+                </div>
+                <span>isa_ggii</span>
+            </div>
+
+            <div class="story-item">
+                <div class="story-ring">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="abdujabbo...">
+                </div>
+                <span>abdujabbo...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Posts Feed -->
+    <div class="posts-feed">
+        <!-- Post 1 -->
+        <article class="post">
+            <header class="post-header">
+                <div class="user-info">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="kunduziy" class="profile-pic">
+                    <div class="user-details">
+                        <h3>kunduziy</h3>
+                        <span class="location">Tashkent, Uzbekistan</span>
+                    </div>
+                </div>
+                <button class="more-options">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="1.5"></circle>
+                        <circle cx="6" cy="12" r="1.5"></circle>
+                        <circle cx="18" cy="12" r="1.5"></circle>
+                    </svg>
+                </button>
+            </header>
+
+            <div class="post-media">
+                <img src="{% static 'img/default-post.jpg' %}" alt="Post image">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <div class="action-buttons">
+                    <button class="action-btn like-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <polyline points="16,6 12,2 8,6"></polyline>
+                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </svg>
+                    </button>
+                    <button class="action-btn save-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="likes-section">
+                    <span class="likes-count">8,487 likes</span>
+                </div>
+
+                <div class="caption-section">
+                    <span class="username">kunduziy</span>
+                    <span class="caption">Beautiful sunset in Tashkent! 🌅 #sunset #tashkent #uzbekistan</span>
+                </div>
+
+                <button class="view-comments">View all 23 comments</button>
+
+                <div class="comment-preview">
+                    <span class="username">asadbek_a</span>
+                    <span class="comment">Amazing shot! 🔥</span>
+                </div>
+
+                <time class="post-time">6 HOURS AGO</time>
+            </div>
+
+            <div class="add-comment-section">
+                <input type="text" placeholder="Add a comment..." class="comment-input">
+                <button class="post-comment-btn">Post</button>
+            </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post">
+            <header class="post-header">
+                <div class="user-info">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="farrukh_dev" class="profile-pic">
+                    <div class="user-details">
+                        <h3>farrukh_dev</h3>
+                        <span class="location">Samarkand, Uzbekistan</span>
+                    </div>
+                </div>
+                <button class="more-options">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="1.5"></circle>
+                        <circle cx="6" cy="12" r="1.5"></circle>
+                        <circle cx="18" cy="12" r="1.5"></circle>
+                    </svg>
+                </button>
+            </header>
+
+            <div class="post-media">
+                <img src="{% static 'img/default-post.jpg' %}" alt="Post image">
+            </div>
+
+            <div class="post-actions">
+                <div class="action-buttons">
+                    <button class="action-btn like-btn liked">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <polyline points="16,6 12,2 8,6"></polyline>
+                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </svg>
+                    </button>
+                    <button class="action-btn save-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="likes-section">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="Liked by" class="liked-by-pic">
+                    <span class="likes-text">Liked by <strong>ozodbek_baxtiyaro</strong> and <strong>1,234 others</strong></span>
+                </div>
+
+                <div class="caption-section">
+                    <span class="username">farrukh_dev</span>
+                    <span class="caption">Coding session in beautiful Samarkand 💻✨ #coding #samarkand #developer</span>
+                </div>
+
+                <button class="view-comments">View all 45 comments</button>
+
+                <time class="post-time">1 DAY AGO</time>
+            </div>
+
+            <div class="add-comment-section">
+                <input type="text" placeholder="Add a comment..." class="comment-input">
+                <button class="post-comment-btn">Post</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<style>
+.home-container {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Stories Section */
+.stories-section {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.stories-wrapper {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.stories-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 66px;
+    cursor: pointer;
+}
+
+.story-ring {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.your-story .story-ring {
+    background: #dbdbdb;
+}
+
+.story-ring img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.add-story-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: #0095f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.story-item span {
+    font-size: 12px;
+    color: #262626;
+    text-align: center;
+    max-width: 66px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Posts Feed */
+.posts-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.post {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: #262626;
+}
+
+.location {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.more-options {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #262626;
+}
+
+.post-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.post-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dots {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.dot.active {
+    background: white;
+}
+
+.post-actions {
+    padding: 8px 16px 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #262626;
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: #8e8e8e;
+}
+
+.like-btn.liked {
+    color: #ed4956;
+}
+
+.save-btn {
+    margin-left: auto;
+}
+
+.likes-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.liked-by-pic {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.likes-count, .likes-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.caption-section {
+    margin-bottom: 4px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+    margin-right: 8px;
+}
+
+.caption {
+    font-size: 14px;
+    color: #262626;
+}
+
+.view-comments {
+    background: none;
+    border: none;
+    color: #8e8e8e;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+.comment-preview {
+    margin-bottom: 8px;
+}
+
+.comment-preview .username {
+    margin-right: 4px;
+}
+
+.comment {
+    font-size: 14px;
+    color: #262626;
+}
+
+.post-time {
+    font-size: 10px;
+    color: #8e8e8e;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.add-comment-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #efefef;
+    padding: 16px;
+}
+
+.comment-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #262626;
+}
+
+.comment-input::placeholder {
+    color: #8e8e8e;
+}
+
+.post-comment-btn {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-comment-btn:disabled {
+    color: #b3d4fc;
+    cursor: default;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .home-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .stories-section, .post {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    .stories-section {
+        margin-bottom: 0;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .posts-feed {
+        gap: 0;
+    }
+
+    .post {
+        margin-bottom: 0;
+        border-top: none;
+    }
+
+    .post:first-child {
+        border-top: 1px solid #dbdbdb;
+    }
+}
+</style>
+{% endblock %}

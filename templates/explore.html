@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Explore • Instagram{% endblock %}
+
+{% block content %}
+<div class="explore-container">
+    <div class="explore-grid">
+        <!-- Large featured post -->
+        <div class="explore-item large">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        12.5K
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        234
+                    </span>
+                </div>
+                <div class="post-type-indicator">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular posts -->
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        1,234
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        23
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        567
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        12
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video/Reel post -->
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore reel">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        2,891
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        45
+                    </span>
+                </div>
+                <div class="video-indicator">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                        <polygon points="5,3 19,12 5,21"></polygon>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        789
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        34
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        1,456
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        67
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tall post -->
+        <div class="explore-item tall">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        3,210
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        89
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        654
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        21
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        987
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        43
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue with more posts -->
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        432
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        18
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="explore-item">
+            <img src="{% static 'img/default-post.jpg' %}" alt="Explore post">
+            <div class="explore-overlay">
+                <div class="overlay-stats">
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        1,876
+                    </span>
+                    <span class="stat">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        56
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.explore-container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    grid-auto-rows: 293px;
+}
+
+.explore-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.explore-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.explore-item.tall {
+    grid-row: span 2;
+}
+
+.explore-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.explore-item:hover img {
+    transform: scale(1.05);
+}
+
+.explore-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.explore-item:hover .explore-overlay {
+    opacity: 1;
+}
+
+.overlay-stats {
+    display: flex;
+    gap: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-type-indicator, .video-indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.video-indicator {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .explore-container {
+        padding: 0;
+    }
+
+    .explore-grid {
+        gap: 2px;
+        grid-auto-rows: calc((100vw - 4px) / 3);
+    }
+
+    .overlay-stats {
+        gap: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-grid {
+        gap: 1px;
+        grid-auto-rows: calc((100vw - 2px) / 3);
+    }
+
+    .overlay-stats {
+        gap: 15px;
+        font-size: 12px;
+    }
+
+    .stat {
+        gap: 4px;
+    }
+}
+</style>
+{% endblock %}
