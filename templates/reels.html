@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reels • Instagram</title>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Reels{% endblock %}
+{% block extra_css %}
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #000;
-            color: white;
-            overflow: hidden;
-        }
-
-        .main-container {
+           .main-container {
             display: flex;
             height: 100vh;
         }
@@ -199,13 +185,9 @@
             }
         }
     </style>
-</head>
-<body>
-    <div class="main-container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            {% include 'layouts/header.html' %}
-        </div>
+{% endblock %}
+
+{% block content %}
 
         <!-- Reels Container -->
         <div class="reels-container">
@@ -410,5 +392,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
