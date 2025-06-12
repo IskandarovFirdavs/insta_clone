@@ -32,9 +32,12 @@ class Follower(models.Model):
     class Meta:
         unique_together = ('follower_by_user_id', 'followee_user_id')
 
+<<<<<<< HEAD
 
 class Singer(models.Model):
     fullname = models.CharField(max_length=60)
 
     def __str__(self):
         return self.fullname
+=======
+>>>>>>> origin/my-backup-branch
