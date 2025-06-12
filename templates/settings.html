@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="settings-page">
+    <h2>Settings</h2>
+    <div class="settings-list">
+        <div class="setting-item">
+            <span>Dark Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle-setting">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <span>Push Notifications</span>
+            <label class="switch">
+                <input type="checkbox" id="push-notifications-setting">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="setting-item">
+            <span>Private Account</span>
+            <label class="switch">
+                <input type="checkbox" id="private-account-setting">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <button class="btn btn-danger btn-block mt-4" id="logout-button">Log Out</button>
+    </div>
+</section>
+{% endblock %}
