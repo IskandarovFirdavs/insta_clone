@@ -33,5 +33,3 @@ class Follower(models.Model):
         unique_together = ('follower_by_user', 'followee_user_id')
 
 
-
-
