@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Register - Instagram Clone{% endblock %}
+
+{% block content %}
+<main class="auth-container">
+  <div class="auth-form">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Name" required />
+      <input type="text" placeholder="Surname" required />
+      <input type="file" accept="image/*" placeholder="Avatar" />
+      <input type="password" placeholder="Password" required />
+      <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <select name="subject">
+        <option value="he">He</option>
+        <option value="she">She</option>
+        <option value="it">It</option>
+        <option value="they">They</option>
+      </select>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+  </div>
+</main>
+{% endblock %}

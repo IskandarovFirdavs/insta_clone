@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Post - Instagram Clone</title>
+{% endblock %} {% block content %}
+<main class="post-detail-container">
+  <div class="post-detail">
+    <img
+      src="{% static 'images/post1.jpg' %}"
+      alt="Post Image"
+      class="post-detail-media"
+    />
+    <div class="post-detail-content">
+      <div class="post-header">
+        <img
+          src="{% static 'images/avatar1.jpg' %}"
+          alt="User Avatar"
+          class="post-avatar"
+        />
+        <div class="post-user">
+          <span class="username">username1</span>
+          <span class="location">New York</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p><strong>username1</strong> This is a caption. #summer #travel</p>
+        <p class="music">🎵 Music: Song Name - Artist</p>
+        <span class="likes">1,234 likes</span>
+        <div class="comments">
+          <p>
+            <strong>username2</strong> Great post! 😍
+            <i class="far fa-heart"></i>
+          </p>
+          <p class="reply">
+            <strong>username3</strong> Love this!
+            <i class="far fa-heart"></i>
+          </p>
+        </div>
+        <form class="comment-form">
+          <input type="text" placeholder="Add a comment..." />
+          <button type="submit">Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -5,7 +5,8 @@ from schoollife import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('users.urls')),
+    path('users/', include('users.urls')),
+    path('', include('posts.urls')),
 ]
 
 

@@ -26,12 +26,15 @@ class User(AbstractUser):
 
 
 class Follower(models.Model):
-    follower_by_user_id = models.ForeignKey(User,on_delete=models.CASCADE)
-    followee_user_id = models.ForeignKey(User,on_delete=models.CASCADE)
+    follower_by_user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='following')
+    followee_user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followers')
 
     class Meta:
-        unique_together = ('follower_by_user', 'followee_user_id')
+        unique_together = ('follower_by_user_id', 'followee_user_id')
 
 
+class Singer(models.Model):
+    fullname = models.CharField(max_length=60)
 
-
+    def __str__(self):
+        return self.fullname
