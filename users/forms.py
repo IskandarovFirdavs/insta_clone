@@ -4,13 +4,11 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from .models import User
 
 
-class UserRegister(UserCreationForm):
-    name = forms.CharField(max_length=30, required=True)
-    surname = forms.CharField(max_length=30, required=True)
-
+class UserRegister(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['name', 'surname']
+        fields = ['first_name', 'username', 'email', 'gender', 'password']
+
 
 
 class UserLogin(AuthenticationForm):
@@ -23,8 +21,8 @@ class UserUpdate(forms.ModelForm):
     surname = forms.CharField(max_length=30, required=True)
     username = forms.CharField(max_length=30, required=True)
     bio = forms.CharField(max_length=250, required=True)
-    avatar = forms.FileField(upload_to='user/avatar')
-    email = forms.EmailField(unique=True, required=True)
+    avatar = forms.ImageField()
+    email = forms.EmailField(required=True)
     gender = forms.CharField(max_length=10,)
     subject = forms.CharField(max_length=10, required=True)
 

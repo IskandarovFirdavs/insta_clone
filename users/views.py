@@ -4,24 +4,27 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserRegister, UserUpdate
 from .models import User, Follower
 
+
 def register(request):
-    if request.method == 'POST':
+    if request.method == 'POST':    
+        print("Registering user")
+        print(request.POST)
         form = UserRegister(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.save()
+            print("User registered successfully")
             login(request, user)
             return redirect('profile', user_id=user.id)
     else:
         form = UserRegister()
-    return render(request, 'user/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 
-@login_required
 def profile(request, user_id):
     user_profile = get_object_or_404(User, id=user_id)
-    return render(request, 'user/profile.html', {'user_profile': user_profile})
+    return render(request, 'profile.html', {'user_profile': user_profile})
 
 
 @login_required
@@ -30,7 +33,7 @@ def edit_profile(request):
     if request.method == 'POST' and form.is_valid():
         form.save()
         return redirect('profile', user_id=request.user.id)
-    return render(request, 'user/edit_profile.html', {'form': form})
+    return render(request, 'profile.html', {'form': form})
 
 
 @login_required
