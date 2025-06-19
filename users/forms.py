@@ -11,7 +11,7 @@ class UserRegister(forms.ModelForm):
 
 
 
-class UserLogin(AuthenticationForm):
+class UserLogin(forms.Form):
     username = forms.CharField(max_length=250)
     password = forms.CharField(widget=forms.PasswordInput)
 
@@ -26,8 +26,8 @@ class UserUpdate(forms.ModelForm):
     gender = forms.CharField(max_length=10,)
     subject = forms.CharField(max_length=10, required=True)
 
-class Meta:
-    model = User
-    fields = ['name', 'surname', 'username', 'bio', 'avatar', 'email', 'gender', 'subject']
+    class Meta:
+        model = User
+        fields = ['name', 'surname', 'username', 'bio', 'avatar', 'email', 'gender', 'subject']
 
 
